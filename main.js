@@ -13,6 +13,17 @@ function calculateCartTotal(cart){
   return prices.reduce((a,c)=>a+c, 0)
 }
 
-
 //part 2
-function printCartInventory(cart){}
+
+function printCartInventory(cart){
+  //create empty string
+  let result = "";
+  
+  //for/in loop. grab quantity and name of items. add to result
+  for(let keys in cart){
+    result+=`${cart[keys].quantity}x${keys}\n`
+  }
+  
+  //return the resulting string
+  return result
+}
